@@ -29,8 +29,16 @@
           cursor: pointer;
         }
       }
+
       .copyright {
         font-size: 0.5rem;
+      }
+    }
+    .favicon-span {
+      height: auto;
+      img {
+        width: 20px;
+        height: auto;
       }
     }
   }

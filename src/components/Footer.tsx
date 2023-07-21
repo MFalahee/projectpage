@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -19,10 +18,14 @@ export default function Footer() {
             <FontAwesomeIcon icon={faLinkedin} />{" "}
           </span>
         </div>
+        <span className="favicon-span">
+          <img src="/favicon.ico" alt="falahee.dev favicon" />
+        </span>
         <div className="footer-right">
           <span className="copyright">
             © {new Date().getFullYear()} falahee.dev
           </span>
+          <span> </span>
         </div>
       </div>
     </div>
