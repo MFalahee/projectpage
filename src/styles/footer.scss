@@ -1,0 +1,37 @@
+.footer-container {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .footer-content {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    .footer-left {
+      span {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: #608ed2;
+          cursor: pointer;
+        }
+      }
+    }
+    .footer-right {
+      align-items: center;
+      span {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .copyright {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
