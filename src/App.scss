@@ -16,6 +16,12 @@ body {
   font-size: 30px;
   font-weight: 700;
   text-align: center;
+
+  // resize for mobile
+  @media (max-width: 768px) {
+    padding: 0;
+    font-size: 20px;
+  }
 }
 
 .project-grid {

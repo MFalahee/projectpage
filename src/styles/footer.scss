@@ -6,6 +6,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  // remove for mobile
+  @media (max-width: 768px) {
+    display: none;
+  }
   .footer-content {
     width: 50%;
     display: flex;
