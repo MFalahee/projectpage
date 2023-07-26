@@ -1,18 +1,21 @@
 #root {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 body {
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
 
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+}
 // idle page styling
 .idle-page {
+  margin: 5%;
   overflow: hidden;
-  translate: 40% 20%;
   border-radius: 10px;
   width: 1200px;
   height: 800px;
