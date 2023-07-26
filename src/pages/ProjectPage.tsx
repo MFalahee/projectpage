@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
-
+import Footer from "../components/Footer";
 interface ProjectPageProps {
   visible: boolean;
 }
@@ -69,6 +69,7 @@ const ProjectPage: React.FC<ProjectPageProps> = (props) => {
             );
           })}
         </div>
+        <Footer />
       </>
     );
   else return <> Projects failed to load, try refreshing. </>;

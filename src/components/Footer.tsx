@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { default as favicon } from "/favicon.ico";
 
 export default function Footer() {
   // add a copyright for year 2023, falahee.dev
@@ -19,7 +20,7 @@ export default function Footer() {
           </span>
         </div>
         <span className="favicon-span">
-          <img src="/favicon.ico" alt="falahee.dev favicon" />
+          <img src={favicon} alt="falahee.dev favicon" />
         </span>
         <div className="footer-right">
           <span className="copyright">

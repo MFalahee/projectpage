@@ -4,13 +4,22 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: "Roboto", sans-serif;
   color: #fff;
-  background-color: #1d3354;
 }
 
+// idle page styling
+.idle-page {
+  overflow: hidden;
+  translate: 40% 20%;
+  border-radius: 10px;
+  width: 1200px;
+  height: 800px;
+  background-color: rgba(black, 0.7);
+}
+
+// project page styling
 .project-header {
   padding: 50px;
   font-size: 30px;

@@ -1,12 +1,17 @@
+import * as React from "react";
+import { Routes, Route } from "react-router-dom";
+
 import ProjectPage from "./pages/ProjectPage";
-import Footer from "./components/Footer";
+import IdlePage from "./pages/IdlePage";
 import "./App.scss";
 
 function App() {
   return (
     <div className="app-wrapper">
-      <ProjectPage visible={true} />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<IdlePage />} />
+        <Route path="/pp" element={<ProjectPage visible={true} />} />
+      </Routes>
     </div>
   );
 }
