@@ -45,7 +45,7 @@ const ProjectPage: React.FC<ProjectPageProps> = (props) => {
   }, []);
   if (projects && projects.length > 0)
     return (
-      <>
+      <div className="pp-wrapper">
         <header className="project-header">
           <h1 className="project-header-text">
             Some of my projects from the past:{" "}
@@ -70,7 +70,7 @@ const ProjectPage: React.FC<ProjectPageProps> = (props) => {
           })}
         </div>
         <Footer />
-      </>
+      </div>
     );
   else return <> Projects failed to load, try refreshing. </>;
 };
