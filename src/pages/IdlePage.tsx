@@ -4,23 +4,18 @@ import imgURL from "/smolsleepypenguin.png";
 import { useSpring, animated } from "@react-spring/web";
 
 const IdlePage: React.FC = () => {
-  // container dimensions
-  // x: 1200
-  // y: 800
-  //   img dimensions
-  // x: 400
-  // y: 195
-
-  //   smol
-  //   x: 100
-  // y: 49
-
+  const imgRef = React.useRef<HTMLImageElement>(null);
+  const [windowX, setWindowX] = React.useState(window.innerWidth);
+  const [windowY, setWindowY] = React.useState(window.innerHeight);
   const [forwardX, setForwardX] = React.useState(true);
   const [forwardY, setForwardY] = React.useState(true);
   const [stateX, setStateX] = React.useState(0);
   const [stateY, setStateY] = React.useState(0);
-  let speedX = 10;
-  let speedY = 6;
+
+  let speedX = 20;
+  let speedY = 12;
+  let imgWidth = 0;
+  let imgHeight = 0;
   const springs = useSpring({
     config: {
       mass: 10,
@@ -38,9 +33,13 @@ const IdlePage: React.FC = () => {
   });
 
   React.useEffect(() => {
+    if (imgRef.current) {
+      imgWidth = imgRef.current.clientWidth;
+      imgHeight = imgRef.current.clientHeight;
+    }
     const interval = setInterval(() => {
       if (forwardX) {
-        if (stateX >= 220 - 100) {
+        if (stateX >= windowX * 0.95 - imgWidth) {
           setForwardX(false);
         }
       } else {
@@ -49,7 +48,7 @@ const IdlePage: React.FC = () => {
         }
       }
       if (forwardY) {
-        if (stateY >= 160 - 49) {
+        if (stateY >= windowY * 0.95 - imgHeight) {
           setForwardY(false);
         }
       } else {
@@ -62,17 +61,21 @@ const IdlePage: React.FC = () => {
     }, 100);
     return () => clearInterval(interval);
   }, [springs]);
+
+  React.useEffect(() => {
+    setWindowX(window.innerWidth);
+    setWindowY(window.innerHeight);
+  }, [window.innerHeight, window.innerWidth]);
   return (
     <div className="idle-page">
       <animated.div
         className="spring-div"
         style={{
-          width: 20,
-          height: 20,
           ...springs,
         }}
       >
         <img
+          ref={imgRef}
           className="peng-img"
           src={imgURL}
           alt="sleepy penguin icon bouncing"

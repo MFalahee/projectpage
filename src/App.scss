@@ -11,14 +11,15 @@ body {
 .app-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 // idle page styling
 .idle-page {
+  padding: 0;
+  margin: 0;
   overflow: hidden;
+  width: 95vw;
+  height: 95vh;
   border-radius: 5px;
-  width: 220px;
-  height: 160px;
   background-color: rgba(black, 0.7);
 }
 
