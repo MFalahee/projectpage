@@ -1,7 +1,7 @@
 import * as React from "react";
 import imgURL from "/sleepypenguin.png";
 
-import { useSpring, useSpringRef, animated } from "@react-spring/web";
+import { useSpring, animated } from "@react-spring/web";
 
 const IdlePage: React.FC = () => {
   // container dimensions
