@@ -1,5 +1,5 @@
 import * as React from "react";
-import imgURL from "/sleepypenguin.png";
+import imgURL from "/smolsleepypenguin.png";
 
 import { useSpring, animated } from "@react-spring/web";
 
@@ -10,12 +10,17 @@ const IdlePage: React.FC = () => {
   //   img dimensions
   // x: 400
   // y: 195
+
+  //   smol
+  //   x: 100
+  // y: 49
+
   const [forwardX, setForwardX] = React.useState(true);
   const [forwardY, setForwardY] = React.useState(true);
   const [stateX, setStateX] = React.useState(0);
   const [stateY, setStateY] = React.useState(0);
-  let speedX = 50;
-  let speedY = 30;
+  let speedX = 10;
+  let speedY = 6;
   const springs = useSpring({
     config: {
       mass: 10,
@@ -35,7 +40,7 @@ const IdlePage: React.FC = () => {
   React.useEffect(() => {
     const interval = setInterval(() => {
       if (forwardX) {
-        if (stateX >= 1200 - 400) {
+        if (stateX >= 220 - 100) {
           setForwardX(false);
         }
       } else {
@@ -44,7 +49,7 @@ const IdlePage: React.FC = () => {
         }
       }
       if (forwardY) {
-        if (stateY >= 800 - 195) {
+        if (stateY >= 160 - 49) {
           setForwardY(false);
         }
       } else {
